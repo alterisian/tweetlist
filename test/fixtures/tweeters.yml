@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  handle: MyString
+  access_token: MyString
+  access_token_secret: MyString
+  followers: 1
+  following: 1
+  influence: 1
+  tweet_count: 1
+
+two:
+  handle: MyString
+  access_token: MyString
+  access_token_secret: MyString
+  followers: 1
+  following: 1
+  influence: 1
+  tweet_count: 1
