@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Handle:</strong>
+  <%= @tweeter.handle %>
+</p>
+
+<p>
+  <strong>Access token:</strong>
+  <%= @tweeter.access_token %>
+</p>
+
+<p>
+  <strong>Access token secret:</strong>
+  <%= @tweeter.access_token_secret %>
+</p>
+
+<p>
+  <strong>Followers:</strong>
+  <%= @tweeter.followers %>
+</p>
+
+<p>
+  <strong>Following:</strong>
+  <%= @tweeter.following %>
+</p>
+
+<p>
+  <strong>Influence:</strong>
+  <%= @tweeter.influence %>
+</p>
+
+<p>
+  <strong>Tweet count:</strong>
+  <%= @tweeter.tweet_count %>
+</p>
+
+<%= link_to 'Edit', edit_tweeter_path(@tweeter) %> |
+<%= link_to 'Back', tweeters_path %>

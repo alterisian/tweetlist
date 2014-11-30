@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tweeters
+
   resources :lists
 
   resources :tweets do
