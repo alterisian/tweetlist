@@ -1,5 +1,5 @@
 class TweetersController < ApplicationController
-  before_action :set_tweeter, only: [:show, :edit, :update, :destroy]
+  before_action :set_tweeter, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /tweeters
   # GET /tweeters.json
