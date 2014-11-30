@@ -1,6 +1,5 @@
-<h1>Editing tweeter</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @tweeter %> |
-<%= link_to 'Back', tweeters_path %>
+<%- model_class = Tweeter -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Tweeter %></h1>
+</div>
+<%= render :partial => 'form' %>

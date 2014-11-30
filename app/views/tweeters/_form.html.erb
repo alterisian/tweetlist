@@ -1,45 +1,52 @@
-<%= form_for(@tweeter) do |f| %>
-  <% if @tweeter.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tweeter.errors.count, "error") %> prohibited this tweeter from being saved:</h2>
-
-      <ul>
-      <% @tweeter.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @tweeter, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :handle, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :handle, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :access_token, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :access_token, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :access_token_secret, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :access_token_secret, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :followers, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :followers, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :following, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :following, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :influence, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :influence, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tweet_count, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :tweet_count, :class => 'text-field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :handle %><br>
-    <%= f.text_field :handle %>
-  </div>
-  <div class="field">
-    <%= f.label :access_token %><br>
-    <%= f.text_field :access_token %>
-  </div>
-  <div class="field">
-    <%= f.label :access_token_secret %><br>
-    <%= f.text_field :access_token_secret %>
-  </div>
-  <div class="field">
-    <%= f.label :followers %><br>
-    <%= f.number_field :followers %>
-  </div>
-  <div class="field">
-    <%= f.label :following %><br>
-    <%= f.number_field :following %>
-  </div>
-  <div class="field">
-    <%= f.label :influence %><br>
-    <%= f.number_field :influence %>
-  </div>
-  <div class="field">
-    <%= f.label :tweet_count %><br>
-    <%= f.number_field :tweet_count %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  tweeters_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
